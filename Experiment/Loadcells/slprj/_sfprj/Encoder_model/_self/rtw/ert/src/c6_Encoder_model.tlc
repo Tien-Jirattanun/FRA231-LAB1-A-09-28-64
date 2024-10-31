@@ -1,0 +1,103 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   12 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "sfEvent"\
+      Description  "ActiveChartEvent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "doneDoubleBufferReInit"\
+      Description  "DoubleBufferInitCheck"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "pre_A"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:62-67"\
+    }\
+    ChartData {\
+      Name         "pre_A_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:62-67"\
+    }\
+    ChartData {\
+      Name         "pre_B"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:79-84"\
+    }\
+    ChartData {\
+      Name         "pre_B_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:79-84"\
+    }\
+    ChartData {\
+      Name         "pos"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:172-175"\
+    }\
+    ChartData {\
+      Name         "pos_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:172-175"\
+    }\
+    ChartData {\
+      Name         "array_pos"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:188-197"\
+      Dimensions   [1,10]\
+    }\
+    ChartData {\
+      Name         "array_pos_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:188-197"\
+    }\
+    ChartData {\
+      Name         "vel"\
+      Description  "EmlPersistent"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:265-268"\
+    }\
+    ChartData {\
+      Name         "vel_not_empty"\
+      Description  "EmlPersistentSentinel"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  "Encoder_model:90:265-268"\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
